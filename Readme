@@ -1,0 +1,155 @@
+Perfeito 👌 — aqui vai um **README.md profissional e bem estruturado** para tua API Spring Boot (`employee-api`), seguindo boas práticas e compatível com o tutorial do Spring.
+Ele explica o propósito, endpoints REST, como rodar o projeto e como testá-lo.
+
+---
+
+```markdown
+# 🧩 Employee API - Spring Boot REST
+
+API REST desenvolvida com **Spring Boot** para gestão de funcionários.  
+Este projeto faz parte do **Laboratório 4 de Aplicações Móveis (ISPTEC)** e demonstra a implementação de serviços de middleware com consumo posterior por uma aplicação Android.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- **Java 8+**
+- **Spring Boot 3.x**
+- **Spring Web (REST)**
+- **Spring Data JPA**
+- **H2 Database (em memória)**
+- **Maven** para build e dependências
+
+---
+
+## 📂 Estrutura do Projeto
+
+```
+
+employee-api/
+│   pom.xml
+│   README.md
+│
+├───src
+│   ├───main
+│   │   ├───java/com/isptec/employee
+│   │   │   ├───controller      # Endpoints REST
+│   │   │   ├───model           # Entidades JPA
+│   │   │   ├───repository      # Interfaces de acesso a dados
+│   │   │   └───service         # Regras de negócio (opcional)
+│   │   └───resources
+│   │       └───application.properties
+│   └───test/java/com/isptec/employee
+
+````
+
+---
+
+## ⚙️ Configuração e Execução
+
+### 🔹 Pré-requisitos
+- [Java JDK 8 ou superior](https://www.oracle.com/java/technologies/javase-downloads.html)
+- [Apache Maven](https://maven.apache.org/download.cgi)
+- Editor recomendado: **VS Code** ou **IntelliJ IDEA**
+
+### 🔹 Clonar o projeto
+```bash
+git clone https://github.com/seu-usuario/employee-api.git
+cd employee-api
+````
+
+### 🔹 Rodar com Maven
+
+```bash
+mvn spring-boot:run
+```
+
+O servidor iniciará em:
+
+```
+http://localhost:8080
+```
+
+---
+
+## 🧠 Endpoints Disponíveis
+
+| Método   | Endpoint          | Descrição                           |
+| -------- | ----------------- | ----------------------------------- |
+| `GET`    | `/employees`      | Retorna todos os funcionários       |
+| `GET`    | `/employees/{id}` | Retorna um funcionário pelo ID      |
+| `POST`   | `/employees`      | Cria um novo funcionário            |
+| `PUT`    | `/employees/{id}` | Atualiza os dados de um funcionário |
+| `DELETE` | `/employees/{id}` | Remove um funcionário               |
+
+### 📘 Exemplo de JSON (POST/PUT)
+
+```json
+{
+  "name": "Pedro João",
+  "role": "Desenvolvedor Mobile"
+}
+```
+
+---
+
+## 🧪 Testar com cURL
+
+```bash
+# Listar funcionários
+curl -X GET http://localhost:8080/employees
+
+# Adicionar funcionário
+curl -X POST -H "Content-Type: application/json" -d '{"name":"Pedro João","role":"Mobile Dev"}' http://localhost:8080/employees
+
+# Atualizar funcionário
+curl -X PUT -H "Content-Type: application/json" -d '{"name":"Pedro João","role":"Backend Dev"}' http://localhost:8080/employees/1
+
+# Deletar funcionário
+curl -X DELETE http://localhost:8080/employees/1
+```
+
+---
+
+## 🗃️ Banco de Dados
+
+A aplicação utiliza **H2 Database (em memória)**.
+Console disponível em:
+
+```
+http://localhost:8080/h2-console
+```
+
+* **JDBC URL:** `jdbc:h2:mem:testdb`
+* **User:** `sa`
+* **Password:** *(vazio)*
+
+---
+
+## 📱 Integração com Android
+
+O cliente móvel (aplicação Android) deve consumir esta API usando um **HttpClient** ou **AsyncTask**,
+garantindo execução em **thread paralela (thread-safe)** e interação segura com a **UI Thread**.
+
+---
+
+## 📘 Referências
+
+* [Spring Boot REST Tutorial (spring.io)](https://spring.io/guides/tutorials/rest)
+* [Documentação do Maven](https://maven.apache.org/guides/)
+* [H2 Database Console](https://www.h2database.com/html/main.html)
+
+---
+
+## 🧾 Autor
+
+**Pedro João**
+Aplicações Móveis – ISPTEC 2025/2026
+📅 *Novembro de 2025*
+
+```
+
+---
+
+Posso complementar o README com uma seção sobre **como o app Android vai consumir a API** (com exemplo de `AsyncTask` ou `HttpClient`) — quer que eu adicione isso também?
+```
