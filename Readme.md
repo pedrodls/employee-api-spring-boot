@@ -1,4 +1,3 @@
-```markdown
 # 🧩 Employee API - Spring Boot REST
 
 API REST desenvolvida com **Spring Boot** para gestão de funcionários.  
@@ -20,7 +19,6 @@ Este projeto faz parte do **Laboratório 4 de Aplicações Móveis (ISPTEC)** e 
 ## 📂 Estrutura do Projeto
 
 ```
-
 employee-api/
 │   pom.xml
 │   README.md
@@ -35,8 +33,7 @@ employee-api/
 │   │   └───resources
 │   │       └───application.properties
 │   └───test/java/com/isptec/employee
-
-````
+```
 
 ---
 
@@ -51,16 +48,14 @@ employee-api/
 ```bash
 git clone https://github.com/seu-usuario/employee-api.git
 cd employee-api
-````
+```
 
 ### 🔹 Rodar com Maven
-
 ```bash
 mvn spring-boot:run
 ```
 
 O servidor iniciará em:
-
 ```
 http://localhost:8080
 ```
@@ -78,7 +73,6 @@ http://localhost:8080
 | `DELETE` | `/employees/{id}` | Remove um funcionário               |
 
 ### 📘 Exemplo de JSON (POST/PUT)
-
 ```json
 {
   "name": "Pedro João",
@@ -108,22 +102,22 @@ curl -X DELETE http://localhost:8080/employees/1
 
 ## 🗃️ Banco de Dados
 
-A aplicação utiliza **H2 Database (em memória)**.
+A aplicação utiliza **H2 Database (em memória)**.  
 Console disponível em:
-
 ```
 http://localhost:8080/h2-console
 ```
 
-* **JDBC URL:** `jdbc:h2:mem:testdb`
-* **User:** `sa`
-* **Password:** *(vazio)*
+**Configuração padrão:**
+- **JDBC URL:** `jdbc:h2:mem:testdb`
+- **User:** `sa`
+- **Password:** *(vazio)*
 
 ---
 
 ## 📱 Integração com Android
 
-O cliente móvel (aplicação Android) deve consumir esta API usando um **HttpClient** ou **AsyncTask**,
+O cliente móvel (aplicação Android) deve consumir esta API usando um **HttpClient** ou **AsyncTask**,  
 garantindo execução em **thread paralela (thread-safe)** e interação segura com a **UI Thread**.
 
 ---
@@ -138,13 +132,7 @@ garantindo execução em **thread paralela (thread-safe)** e interação segura 
 
 ## 🧾 Autor
 
-**Pedro João**
-Aplicações Móveis – ISPTEC 2025/2026
+**Pedro João**  
+Aplicações Móveis – ISPTEC 2025/2026  
 📅 *Novembro de 2025*
 
-```
-
----
-
-Posso complementar o README com uma seção sobre **como o app Android vai consumir a API** (com exemplo de `AsyncTask` ou `HttpClient`) — quer que eu adicione isso também?
-```
