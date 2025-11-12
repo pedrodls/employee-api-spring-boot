@@ -1,8 +1,3 @@
-Perfeito 👌 — aqui vai um **README.md profissional e bem estruturado** para tua API Spring Boot (`employee-api`), seguindo boas práticas e compatível com o tutorial do Spring.
-Ele explica o propósito, endpoints REST, como rodar o projeto e como testá-lo.
-
----
-
 ```markdown
 # 🧩 Employee API - Spring Boot REST
 
