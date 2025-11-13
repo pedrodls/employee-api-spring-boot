@@ -9,6 +9,7 @@ import com.isptec.employee_api_spring_boot.repository.EmployeeRepository;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class EmployeeController {
 
     private final EmployeeRepository repository;
